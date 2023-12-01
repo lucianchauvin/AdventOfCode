@@ -1,1 +1,0 @@
-print(sum(sorted([sum(y) for y in [map(int, x.strip().split("\n")) for x in "".join(open("1/input.txt").readlines()).split("\n\n")]])[-3:]))
