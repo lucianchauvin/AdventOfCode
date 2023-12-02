@@ -17,12 +17,3 @@
 :normal 0
 :normal lvehdj0 
 :normal q
-:normal VG
-:normal @q 
-:%s/\n/+/g 
-:normal $ 
-:normal x
-:normal 0
-:normal c$
-:insert
-<C-r>=<C-r>"<Enter>
