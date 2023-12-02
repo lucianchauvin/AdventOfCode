@@ -25,12 +25,20 @@
 !_TAG_KIND_DESCRIPTION!Python	i,module	/modules/
 !_TAG_KIND_DESCRIPTION!Python	m,member	/class members/
 !_TAG_KIND_DESCRIPTION!Python	v,variable	/variables/
+!_TAG_KIND_DESCRIPTION!Vim	C,constant	/constant definitions/
+!_TAG_KIND_DESCRIPTION!Vim	a,augroup	/autocommand groups/
+!_TAG_KIND_DESCRIPTION!Vim	c,command	/user-defined commands/
+!_TAG_KIND_DESCRIPTION!Vim	f,function	/function definitions/
+!_TAG_KIND_DESCRIPTION!Vim	m,map	/maps/
+!_TAG_KIND_DESCRIPTION!Vim	n,filename	/vimball filename/
+!_TAG_KIND_DESCRIPTION!Vim	v,variable	/variable definitions/
 !_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_OUTPUT_VERSION	0.0	/current.age/
 !_TAG_PARSER_VERSION!Markdown	0.0	/current.age/
 !_TAG_PARSER_VERSION!Python	0.0	/current.age/
+!_TAG_PARSER_VERSION!Vim	0.0	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
 !_TAG_PROC_CWD	/home/lucian/tsoding/AoC/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
@@ -42,20 +50,20 @@
 !_TAG_ROLE_DESCRIPTION!Python!module	namespace	/namespace from where classes\/variables\/functions are imported/
 !_TAG_ROLE_DESCRIPTION!Python!unknown	imported	/imported from the other module/
 !_TAG_ROLE_DESCRIPTION!Python!unknown	indirectlyImported	/classes\/variables\/functions\/modules imported in alternative name/
-a	2023/1/1.1/1.py	/^            a = int(y)$/;"	v
-a	2023/1/1.1/1.py	/^    a = 0$/;"	v
-a	2023/1/1.2/1.py	/^                    a = dick[key]$/;"	v
-a	2023/1/1.2/1.py	/^                a = int(y)$/;"	v
-a	2023/1/1.2/1.py	/^    a = 0$/;"	v
-b	2023/1/1.1/1.py	/^            b = int(y)$/;"	v
-b	2023/1/1.1/1.py	/^    b = 0$/;"	v
-b	2023/1/1.2/1.py	/^                    b = dick[key]$/;"	v
-b	2023/1/1.2/1.py	/^                b = int(y)$/;"	v
-b	2023/1/1.2/1.py	/^    b = 0$/;"	v
-dick	2023/1/1.2/1.py	/^dick = {$/;"	v
+a	2023/1/1.1/1.1.py	/^            a = int(y)$/;"	v
+a	2023/1/1.1/1.1.py	/^    a = 0$/;"	v
+a	2023/1/1.2/1.2.py	/^                    a = dick[key]$/;"	v
+a	2023/1/1.2/1.2.py	/^                a = int(y)$/;"	v
+a	2023/1/1.2/1.2.py	/^    a = 0$/;"	v
+b	2023/1/1.1/1.1.py	/^            b = int(y)$/;"	v
+b	2023/1/1.1/1.1.py	/^    b = 0$/;"	v
+b	2023/1/1.2/1.2.py	/^                    b = dick[key]$/;"	v
+b	2023/1/1.2/1.2.py	/^                b = int(y)$/;"	v
+b	2023/1/1.2/1.2.py	/^    b = 0$/;"	v
+dick	2023/1/1.2/1.2.py	/^dick = {$/;"	v
 h	2022/2/2.1.py	/^h = {"A":1,"B":2,"C":3,"X":1,"Y":2,"Z":3}$/;"	v
 h	2022/2/2.2.py	/^h = {"A":1,"B":2,"C":3,"X":1,"Y":2,"Z":3}$/;"	v
 out	2022/2/2.1.py	/^def out(a,b):$/;"	f
 out	2022/2/2.2.py	/^def out(a,b):$/;"	f
-sum	2023/1/1.1/1.py	/^sum = 0$/;"	v
-sum	2023/1/1.2/1.py	/^sum = 0$/;"	v
+sum	2023/1/1.1/1.1.py	/^sum = 0$/;"	v
+sum	2023/1/1.2/1.2.py	/^sum = 0$/;"	v
