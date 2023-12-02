@@ -1,5 +1,5 @@
-﻿# AdventOfCode
-Attempting to do advent of code purely in neovim. No classical programming languages :). If you see python files I'm going to be solving the problem first in there so I can check my work while creating vim solution. What the *code* looks like:
+# AdventOfCode
+Attempting to do advent of code purely in neovim. No classical programming languages :). So basically doing the entire thing with just substitution(replacment), key macros, and the expression register for math. If you see python files I'm going to be solving the problem first in there so I can check my work while creating vim solution. What the *code* looks like:
 ```txt
 :%s/\([a-z] \d*\)\n/\1 
 :%s/\(b \d*\) g/\1\rg
