@@ -50,6 +50,7 @@
 !_TAG_ROLE_DESCRIPTION!Python!module	namespace	/namespace from where classes\/variables\/functions are imported/
 !_TAG_ROLE_DESCRIPTION!Python!unknown	imported	/imported from the other module/
 !_TAG_ROLE_DESCRIPTION!Python!unknown	indirectlyImported	/classes\/variables\/functions\/modules imported in alternative name/
+AdventOfCode	README.md	/^# AdventOfCode$/;"	c
 a	2023/1/1.1/1.1.py	/^            a = int(y)$/;"	v
 a	2023/1/1.1/1.1.py	/^    a = 0$/;"	v
 a	2023/1/1.2/1.2.py	/^                    a = dick[key]$/;"	v
