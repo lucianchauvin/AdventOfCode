@@ -24,5 +24,4 @@
 :normal x
 :normal 0
 :normal c$
-:insert
-<C-r>=<C-r>"<Enter>
+<ctrl-r>=<ctrl-r>"<cr><esc>
