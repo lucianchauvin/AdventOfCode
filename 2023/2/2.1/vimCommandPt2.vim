@@ -5,6 +5,15 @@
 :%s/blue/b/g
 :%s/green/g/g
 :%s/; /\r/g
+:%s/\(\n\d* g, \d* r\)\n/\1, 1 b\r/g
+:%s/\(\n\d* r, \d* g\)\n/\1, 1 b\r/g
+:%s/\(\n\d* r, \d* b\)\n/\1, 1 g\r/g
+:%s/\(\n\d* b, \d* r\)\n/\1, 1 g\r/g
+:%s/\(\n\d* b, \d* g\)\n/\1, 1 r\r/g
+:%s/\(\n\d* g, \d* b\)\n/\1, 1 r\r/g
+:%s/\(\n\d* r\)\n/\1, 1 g, 1 b\r/g
+:%s/\(\n\d* g\)\n/\1, 1 r, 1 b\r/g
+:%s/\(\n\d* b\)\n/\1, 1 r, 1 g\r/g
 :%s/, /\r/g
 :%s/\(\d*\) \([a-z]\)/\2 \1
 gg 0
@@ -20,7 +29,6 @@ q
 10000@q
 :%s/\([a-z] \d*\)\n/\1 
 :%s/\(b \d*\) g/\1\rg
-:%s/\(g \d*\) r/\1\rr
 :%s/\n\(\d*\)\n/\r\r\1\r
 :%s/\([a-z] \d*\) /\1\r/g
 :%s/\(b \d*\)\ng/\1 \r\rg
@@ -30,7 +38,6 @@ qq
 jV)k:sort! n^M)jV)k:sort! n^M)jV)k:sort! n^M))
 q
 10000@q
-:%s/\(\d* [a-z]\)\n\n/\1\r\1\r\r
 qq
 jjV)djV)djV)dj
 q
