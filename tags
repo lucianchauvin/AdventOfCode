@@ -51,6 +51,10 @@
 !_TAG_ROLE_DESCRIPTION!Python!unknown	imported	/imported from the other module/
 !_TAG_ROLE_DESCRIPTION!Python!unknown	indirectlyImported	/classes\/variables\/functions\/modules imported in alternative name/
 AdventOfCode	README.md	/^# AdventOfCode$/;"	c
+C	2023/3/3.1/pySol.py	/^C = len(G[0])$/;"	v
+D	2023/3/3.1/pySol.py	/^D = open("input.txt").read().strip()$/;"	v
+G	2023/3/3.1/pySol.py	/^G = [[c for c in line] for line in lines]$/;"	v
+R	2023/3/3.1/pySol.py	/^R = len(G)$/;"	v
 a	2023/1/1.1/1.1.py	/^            a = int(y)$/;"	v
 a	2023/1/1.1/1.1.py	/^    a = 0$/;"	v
 a	2023/1/1.2/1.2.py	/^                    a = dick[key]$/;"	v
@@ -61,15 +65,19 @@ b	2023/1/1.1/1.1.py	/^    b = 0$/;"	v
 b	2023/1/1.2/1.2.py	/^                    b = dick[key]$/;"	v
 b	2023/1/1.2/1.2.py	/^                b = int(y)$/;"	v
 b	2023/1/1.2/1.2.py	/^    b = 0$/;"	v
+ch	2023/3/3.1/pySol.py	/^            ch = G[r+rr][c+cc]$/;"	v
 dick	2023/1/1.2/1.2.py	/^dick = {$/;"	v
-killMe	2023/3/3.1/pySol.py	/^killMe = []$/;"	v
-l	2023/3/3.1/pySol.py	/^            l = 0$/;"	v
-meow	2023/3/3.1/pySol.py	/^            meow = ""$/;"	v
-number	2023/3/3.1/pySol.py	/^            number = "".join(killMe[y][tmpx:x])$/;"	v
-stupid	2023/3/3.1/pySol.py	/^stupid = [x for x in "*@#-\/=%$+"]$/;"	v
+gears	2023/3/3.1/pySol.py	/^      gears = set()$/;"	v
+gears	2023/3/3.1/pySol.py	/^  gears = set()$/;"	v
+has_part	2023/3/3.1/pySol.py	/^              has_part = True$/;"	v
+has_part	2023/3/3.1/pySol.py	/^      has_part = False$/;"	v
+has_part	2023/3/3.1/pySol.py	/^  has_part = False$/;"	v
+lines	2023/3/3.1/pySol.py	/^lines = D.split('\\n')$/;"	v
+n	2023/3/3.1/pySol.py	/^      n = 0$/;"	v
+n	2023/3/3.1/pySol.py	/^      n = n*10+int(G[r][c])$/;"	v
+n	2023/3/3.1/pySol.py	/^  n = 0$/;"	v
+nums	2023/3/3.1/pySol.py	/^nums = defaultdict(list)$/;"	v
+p1	2023/3/3.1/pySol.py	/^p1 = 0$/;"	v
+p2	2023/3/3.1/pySol.py	/^p2 = 0$/;"	v
 sum	2023/1/1.1/1.1.py	/^sum = 0$/;"	v
 sum	2023/1/1.2/1.2.py	/^sum = 0$/;"	v
-summm	2023/3/3.1/pySol.py	/^summm = 0$/;"	v
-tmpx	2023/3/3.1/pySol.py	/^            tmpx = x$/;"	v
-x	2023/3/3.1/pySol.py	/^    x = 0$/;"	v
-y	2023/3/3.1/pySol.py	/^y = 0$/;"	v

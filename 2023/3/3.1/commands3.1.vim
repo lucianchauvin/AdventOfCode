@@ -34,7 +34,7 @@ l
 :let @e='"'..@a..@b..@c..@d..'"'
 :execute (!
 <CTRL-r> =
-:(@e=~"@")||(@e=~"*")||(@e=~"#")||(@e=~"-")||(@e=~"/")||(@e=~"=")||(@e=~"%")||(stridx(@e,"$") >= 0)||(@e=~"+")
+(@e=~"&")||(@e=~"@")||(@e=~"*")||(@e=~"#")||(@e=~"-")||(@e=~"/")||(@e=~"=")||(@e=~"%")||(stridx(@e,"$") >= 0)||(@e=~"+")
 <Enter>
 ) ? "normal ver." : 0
 `a
@@ -45,16 +45,19 @@ q
 "tmmorrow"
 "manually fixed sides cause thats where macro dies, digits that need to be
 "adde below
-"+466+424+601+558+single good digits
+:/\</
 qr
-try | exe "norm! @q" | endtry | exe "norm! n"^M`an
+:try | exe "norm! @q" | endtry | exe "norm! n"
+<Enter>
+`an
 q
 0
 n
-1000r
 "remove all the numbers around the outside that the exe fails for
 "remove all the single digits that should be removed that dont get removed
 "from the exe (I could have made another exe for one digits but too lazy
+1000r
+"add the good single digits back in
 :%s/\W/\r/g
 :g/^$/d
 :%s/\n/+
@@ -65,4 +68,3 @@ c$
 <CTRL-R> =
 <CTRL-R> "
 <Enter>
-"doesnt work :C
