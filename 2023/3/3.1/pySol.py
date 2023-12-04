@@ -1,41 +1,41 @@
-killMe = []
-stupid = [x for x in "*@#-/=%$+"]
-for x in open('input.txt'):
-    killMe += [[y for y in x[:-1]]]
-y = 0
-summm = 0
-while y < len(killMe):
-    x = 0
-    try: print(killMe[y-1])
-    except: pass
-    print(killMe[y])
-    try: print(killMe[y+1])
-    except: pass
-    while x < len(killMe[y]):
-        if killMe[y][x].isdigit():
-            meow = ""
-            tmpx = x
-            l = 0
-            while x < len(killMe[y]) and killMe[y][x].isdigit(): 
-                x += 1
-                l += 1
-            number = "".join(killMe[y][tmpx:x])
-            for p in range(l+2):
-                try:
-                    meow += killMe[y-1][tmpx + p -1]
-                except: pass
-                try:
-                    meow += killMe[y+1][tmpx + p -1]
-                except: pass
-            try:
-                meow += killMe[y][tmpx - 1]
-            except: pass
-            try: 
-                meow += killMe[y][x]
-            except: pass
-            if(any(e in meow for e in stupid)):
-                summm += int(number) 
-        else:
-            x += 1
-    y += 1
-print(summm)
+import sys
+import re
+from collections import defaultdict
+D = open("./2023/3/3.1/input.txt").read().strip()
+lines = D.split('\n')
+G = [[c for c in line] for line in lines]
+R = len(G)
+C = len(G[0])
+
+p1 = 0
+nums = defaultdict(list)
+for r in range(len(G)):
+  gears = set()
+  n = 0
+  has_part = False
+  for c in range(len(G[r])+1):
+    if c<C and G[r][c].isdigit():
+      n = n*10+int(G[r][c])
+      for rr in [-1,0,1]:
+        for cc in [-1,0,1]:
+          if 0<=r+rr<R and 0<=c+cc<C:
+            ch = G[r+rr][c+cc]
+            if not ch.isdigit() and ch != '.':
+              has_part = True
+            if ch=='*':
+              gears.add((r+rr, c+cc))
+    elif n>0:
+      for gear in gears:
+        nums[gear].append(n)
+      if has_part:
+        p1 += n
+      n = 0
+      has_part = False
+      gears = set()
+
+print(p1)
+p2 = 0
+for k,v in nums.items():
+  if len(v)==2:
+    p2 += v[0]*v[1]
+print(p2)
