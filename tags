@@ -62,5 +62,14 @@ b	2023/1/1.2/1.2.py	/^                    b = dick[key]$/;"	v
 b	2023/1/1.2/1.2.py	/^                b = int(y)$/;"	v
 b	2023/1/1.2/1.2.py	/^    b = 0$/;"	v
 dick	2023/1/1.2/1.2.py	/^dick = {$/;"	v
+killMe	2023/3/3.1/pySol.py	/^killMe = []$/;"	v
+l	2023/3/3.1/pySol.py	/^            l = 0$/;"	v
+meow	2023/3/3.1/pySol.py	/^            meow = ""$/;"	v
+number	2023/3/3.1/pySol.py	/^            number = "".join(killMe[y][tmpx:x])$/;"	v
+stupid	2023/3/3.1/pySol.py	/^stupid = [x for x in "*@#-\/=%$+"]$/;"	v
 sum	2023/1/1.1/1.1.py	/^sum = 0$/;"	v
 sum	2023/1/1.2/1.2.py	/^sum = 0$/;"	v
+summm	2023/3/3.1/pySol.py	/^summm = 0$/;"	v
+tmpx	2023/3/3.1/pySol.py	/^            tmpx = x$/;"	v
+x	2023/3/3.1/pySol.py	/^    x = 0$/;"	v
+y	2023/3/3.1/pySol.py	/^y = 0$/;"	v

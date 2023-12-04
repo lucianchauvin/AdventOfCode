@@ -42,4 +42,27 @@ q
 "this worsk to remove a number if it doesnt have a symbol around it but i just
 "dont know how to turn run it on the start of every number
 "also doesnt work on single digit or number at the border, will work on more
-"tmorrow"
+"tmmorrow"
+"manually fixed sides cause thats where macro dies, digits that need to be
+"adde below
+"+466+424+601+558+single good digits
+qr
+try | exe "norm! @q" | endtry | exe "norm! n"^M`an
+q
+0
+n
+1000r
+"remove all the numbers around the outside that the exe fails for
+"remove all the single digits that should be removed that dont get removed
+"from the exe (I could have made another exe for one digits but too lazy
+:%s/\W/\r/g
+:g/^$/d
+:%s/\n/+
+$
+x
+0
+c$
+<CTRL-R> =
+<CTRL-R> "
+<Enter>
+"doesnt work :C
