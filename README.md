@@ -32,3 +32,6 @@ q
 qq
 j0i<80>kb8^[j0i<80>kb*^[0jj
 ```
+
+## Some things Ive learned
+Not only doing it solely with vim is hard but the mental acrobatics you have to do to solve the problem in vim is extremly hard. In some senses it is also easier though. I came up with a way to do for loops and doing it in vim makes more sense than in a classical language. First you write a macro for what the for loop is going to do at each iteration. Then you figure out how many times you need to iterate and store that in a register. Then you go to where you want to start and do :normal "a@q where a is the register and q is the macro. It so far has been a really cool experience and having to come up with mind boggling solutions is really fun. 
