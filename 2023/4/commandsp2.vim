@@ -11,24 +11,26 @@ q
 98@w
 98@w
 28@w
-:%s/ \d*//g
-:%s/C/1 C
-:%s/\ \(\d\)//g
-:%s/\ \(xx\)/\1/g
-:%s/:xxxxxxxxxxxxxxxxxxxx\ |/: 
-"there is a space after the : above
 qq
-ve:s/\V<80>kb%V\d//g^Mjwwwww
+ma
+v$
+:s/\%V\d*\ //g
+`a
 q
 10000@q
+:%s/x\d\d//g
+:%s/\d*\n/\r/g
+::%s/:\ xx\ xx\ xx\ xx\ xx\ xx\ xx\ xx\ xx\ xx\ | /: 
+:%s/C/1 C
+"there is a space after the : above
 :%s/xx/1/g
-:%s/: \n/: 00\r
-:%s/: 1\n/: 11\r
+:%s/:  \n/:  00\r
+:%s/:  1\n/:  11\r
 gg
 0
 wwwww
-:%s/\(\d\)\(\d\)/\1+\2/
-:%s/\(\d\)\(\d\)/\1+\2/
+:%s/\(\d\)\(\d\)/\1+\2/g
+:%s/\(\d\)\(\d\)/\1+\2/g
 :%s/:\(\d\)+\(\d\):/:\1\2:
 :%s/:\(\d\)+\(\d\)+\(\d\):/:\1\2\3:/g
 gg
@@ -42,7 +44,7 @@ gg
 j
 0
 qq
-cw^R=^R"+1^M^[0k
+cw^R=^R"+"z^M^[0k
 q
 gg
 0
@@ -58,3 +60,4 @@ ma0jwww1000@a`a
 q
 10000@b
 :%s/\d*\ Card\ *:\d*: 0\n//g
+"idk
