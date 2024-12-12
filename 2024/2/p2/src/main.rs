@@ -39,11 +39,19 @@ fn main() -> io::Result<()> {
     let f = File::open("input.txt")?;
     let buf = BufReader::new(f);
 
-    let v:i32 = buf.lines()
+    let v:Vec<Vec<i32>> = buf.lines()
         .map(|x| x.ok().unwrap()
             .split_whitespace().map(|y| y.parse().ok().unwrap())
-            .collect::<Vec<i32>>().is_monotone_by() as i32).sum();
+            .collect::<Vec<i32>>()).collect();
 
-    println!("{:#?}", v);
+    let r:i32 = (0..v.len())
+        .map(|x| (0..v[x].len())
+            .map(|y| v[x].clone().into_iter()
+                .enumerate().filter(|&(i,_)| i != y)
+                .map(|(_, z)| z).collect::<Vec<i32>>().into_iter().collect::<Vec<i32>>()
+                .is_monotone_by()).reduce(|a,b| a || b).unwrap() as i32)
+        .sum();
+
+    println!("{:#?}", r);
     Ok(())
 }
