@@ -35,6 +35,53 @@ fn p1() {
     println!("{}", n);
 }
 
+#[test]
+fn p2() {
+    let mut grid: Vec<Vec<char>> = P1
+        .lines()
+        .map(|l| l.chars().collect())
+        .collect();
+
+    let h = grid.len() as isize;
+    let w = grid[0].len() as isize;
+
+    let dir: [(isize, isize); 8] = [
+        (1, 0), (1, -1), (0, -1), (-1, -1),
+        (-1, 0), (-1, 1), (0, 1), (1, 1),
+    ];
+
+    let mut n = 0;
+    loop {
+        let mut brk = true;
+        for x in 0..h {
+            for y in 0..w {
+                if grid[x as usize][y as usize] != '@' {
+                    continue;
+                }
+                let c = dir.iter().filter(|(dx, dy)| {
+                    let nx = x + dx;
+                    let ny = y + dy;
+
+                    if nx >= 0 && nx < h && ny >= 0 && ny < w {
+                        grid[nx as usize][ny as usize] == '@'
+                    } else {
+                        false
+                    }
+                }).count();
+                if c < 4 {
+                    n += 1;
+                    grid[x as usize][y as usize] = '.';
+                    brk = false;
+                }
+            }
+        }
+        if brk {
+            break;
+        }
+    }
+    println!("{}", n);
+}
+
 fn main() {}
 
 const TEST: &str = "..@@.@@@@.
