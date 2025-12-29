@@ -24,16 +24,39 @@ fn p1() {
 
 #[test]
 fn p2() {
-    let mut s = TEST.lines().take_while(|x| x.trim() != "")
-        .map(|x| x.split("-")
-            .map(|x| x.parse::<usize>().unwrap()).collect::<Vec<_>>())
+    let mut s = P1.lines()
+        .take_while(|x| x.trim() != "")
+        .map(|x| {
+            let pts: Vec<usize> = x.split('-')
+                .map(|p| p.parse::<usize>().unwrap())
+                .collect();
+            (pts[0], pts[1])
+        })
         .collect::<Vec<_>>();
 
-    s.sort_by_key(|a| a[0]);
+    s.sort_by_key(|x| x.0);
 
-        // .map(|x| x[1] - x[0] + 1)
-        // .sum();
-    // println!("{}", s);
+    let mut m: Vec<(usize, usize)> = Vec::new();
+    let (mut c_l, mut c_h) = s[0];
+
+    for i in 1..s.len() {
+        let (n_l, n_h) = s[i];
+
+        if n_l <= c_h + 1 { 
+            c_h = c_h.max(n_h);
+        } else {
+            m.push((c_l, c_h));
+            c_l = n_l;
+            c_h = n_h;
+        }
+    }
+    m.push((c_l, c_h));
+
+    let total: usize = m.iter()
+        .map(|(s, e)| e - s + 1)
+        .sum();
+
+    println!("{}", total);
 }
 
 fn main() {}
